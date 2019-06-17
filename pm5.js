@@ -22,7 +22,7 @@ function connectPM5() {
          let b = { add: disconnectPM5 };
          buttonState.object = b;
 
-         return PM5.addEventListener('additional-status', messagePM5)
+         return PM5.addEventListener('multiplexed-information', messagePM5)
          .then(() => {
              return PM5.addEventListener('disconnect', disconnectPM5);
          })
