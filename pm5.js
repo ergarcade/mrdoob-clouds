@@ -42,4 +42,10 @@ function startGUI() {
     buttonState = concept2Folder.add(connectPM5Button, 'add').name('Connect PM5');
     concept2Folder.open();
 }
-startGUI();
+
+if (!navigator.bluetooth) {
+    alert("Your browser does not support Web Bluetooth! " +
+        "This application only runs on Chrome on the desktop.");
+} else {
+    startGUI();
+}
